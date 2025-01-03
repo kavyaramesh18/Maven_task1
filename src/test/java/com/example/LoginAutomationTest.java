@@ -32,8 +32,8 @@ class LoginAutomationTest {
             WebElement loginButton = driver.findElement(By.id("login-button"));
 
             // Performing login using provided test credentials
-            usernameField.sendKeys("standard_user");
-            passwordField.sendKeys("secret_sauce");
+            usernameField.sendKeys("kavya");
+            passwordField.sendKeys("kavya2003");
             loginButton.click();
 
             // Validating successful login by checking the page title or a unique element
@@ -53,7 +53,7 @@ class LoginAutomationTest {
         // Created an instance of App
         App app = new App();
 
-        String result = app.welcomeMessage("Akash");
+        String result = app.welcomeMessage("Kavya");
 
         // Validating the result
         assertEquals("Hello, Akash!", result, "The welcome message should be correct.");
