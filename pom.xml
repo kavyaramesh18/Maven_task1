@@ -2,7 +2,7 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.example.automation</groupId>
-  <artifactId>LoginAutomation</artifactId>
+  <artifactId>LoginAutomationTest</artifactId>
   <packaging>jar</packaging>
   <version>1.0-SNAPSHOT</version>
   <name>LoginAutomation</name>
@@ -12,6 +12,11 @@
     <maven.compiler.source>11</maven.compiler.source>
     <maven.compiler.target>11</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+    <!-- SonarQube Properties -->
+    <sonar.sources>src/main/java</sonar.sources>  <!-- Main source files -->
+    <sonar.tests>src/test/java</sonar.tests>      <!-- Test source files -->
+    <sonar.java.binaries>target/classes</sonar.java.binaries> <!-- Binaries directory -->
   </properties>
 
   <dependencies>
@@ -89,21 +94,4 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-pmd-plugin</artifactId>
-        <version>3.14.0</version>
-        <executions>
-          <execution>
-            <goals>
-              <goal>pmd</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-      <!-- SonarQube Maven Plugin -->
-      <plugin>
-        <groupId>org.sonarsource.scanner.maven</groupId>
-        <artifactId>sonar-maven-plugin</artifactId>
-        <version>3.9.1.2184</version>
-      </plugin>
-    </plugins>
-  </build>
-</project>
+        <version>3.14.0</
